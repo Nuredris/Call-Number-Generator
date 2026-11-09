@@ -658,7 +658,7 @@ function csvCell(v){v=String(v??'');return /[",\n]/.test(v)?'"'+v.replace(/"/g,'
 function sheetHTML(){
   const horiz=$('#horizontal').checked, color=$('#lcColor').value;
   const labels=batchRows.map(r=>`<div class="l${horiz?' h':''}">${r.b.lines.map(l=>`<span class="${l.c||''}">${esc(l.t)}</span>`).join('')}</div>`).join('\n');
-  return `<!doctype html><html><head><meta name="google-site-verification" content="qlD14jRwax6rZalSrWOAHdVgiYnSk8PLVtB6w8zNRvg" /><meta charset="utf-8"><title>Spine labels</title><style>
+  return `<!doctype html><html><head><meta charset="utf-8"><title>Spine labels</title><style>
 @page{margin:10mm}body{font-family:"Courier New",Courier,monospace;margin:0;padding:10mm;color:#000}
 .grid{display:flex;flex-wrap:wrap;gap:0;padding:0 2pt 2pt 0}.l{border:2pt solid #000;margin:0 -2pt -2pt 0;width:28mm;min-height:38mm;padding:2mm 2.5mm;font-weight:bold;font-size:11pt;line-height:1.25;display:flex;flex-direction:column;break-inside:avoid}
 .l.h{width:auto;min-height:0;flex-direction:row;gap:0 .6em;white-space:nowrap}.loc{font-size:.85em}.lc-red{color:#b3261e}.lc-blue{color:#1f4fa8}
